@@ -8,6 +8,7 @@
     <title>UsabilityHub | User Research &amp; Usability Testing Platform</title>
     <link rel="shortcut icon" href="favicon.png" type="png">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media-queries.css">
 </head>
 
 <body>
@@ -37,7 +38,7 @@
 
             </a>
 
-            <div class="nav-links">
+            <div class="nav-links" id="nav-links">
                 <ul class="flex">
                     <li>
                         <a href="#" class="hover-link">Products</a>
@@ -59,6 +60,9 @@
                     </li>
                 </ul>
             </div>
+            <a href="#" class="nav-toggle hover-link" id="nav-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </a>
         </div>
     </nav>
 
@@ -182,7 +186,7 @@
 
         </div>
 
-        <div class="container flex big-feature-container" style="flex-direction: row-reverse;">
+        <div class="container flex big-feature-container" id="second-big-feature">
             <div class="feature-img">
                 <img src="./assets/asset 21.png" alt="">
 
@@ -325,6 +329,17 @@
 
 
     <script src="https://kit.fontawesome.com/8c3d2572cf.js" crossorigin="anonymous"></script>
+
+    <script>
+        const toggleButton = document.getElementById('nav-toggle');
+        const navLinks = document.getElementById('nav-links');
+
+        toggleButton.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        })
+    </script>
+
+
 </body>
 
 </html>
